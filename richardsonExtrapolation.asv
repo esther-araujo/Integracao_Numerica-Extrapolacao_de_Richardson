@@ -23,8 +23,8 @@ function I = richardsonExtrapolation(funcao,a,b,tipoRegra,N)
  elseif (tipoRegra == 2) %1/3 de simpson
      In=umtercoSimpson(funcao,a,b,N);       %Estimativa com N intervalos
      I2n=umtercoSimpson(funcao,a,b,2*N);    %Estimativa com 2N intervalos
-     I=((2^4)*I2n - In)/(2^4 -1);     %Fórmula geral para duas estimativas com erro de O(h^4) e h2=h1/2
+     I=((2^4)*I2n - In)/(2^4 -1);     %Fórmula geral para duas estimativas com erro de mesma ordem e h2=h1/2
  else
-     fprintf('Entrada referente ao tipo de regra de integração inválida');
+     fprintf('Entrada do tipo de regra de integração inválida');
  end
  
